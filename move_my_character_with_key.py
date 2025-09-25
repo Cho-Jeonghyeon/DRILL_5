@@ -64,7 +64,7 @@ def handle_events():
 
 running = True
 x = 800 // 2
-y= 90
+y= 600 // 2
 frame = 0
 dirx = 0
 diry = 0
@@ -79,6 +79,8 @@ while running:
     frame = (frame + 1) % 8
     x += dirx * 10
     y += diry * 10
+    x = max(30, min(x, 770))
+    y = max(30, min(y, 570))
     delay(0.07)
 
 
